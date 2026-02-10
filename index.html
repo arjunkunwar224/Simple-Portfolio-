@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Personal Portfolio — Developer, Designer, Creator. Explore my projects, read my blog, and get in touch.">
+        <title>Portfolio — Website</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome 6 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <!-- AOS — Animate On Scroll -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+        <header id="header">
+            <nav class="navbar" aria-label="Primary navigation">
+                <a href="#hero" class="nav-logo">Developer</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="nav-link resume-btn" id="navResumeBtn"><i class="fa-solid fa-download"></i>
+                            Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
+        <section id="hero" class="hero-section">
+            <div id="particles-js" class="particles-bg"></div>
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Arjun Kunwar</h1>
+                <h2 class="hero-tagline"><span id="typed-output"></span></h2>
+                <p class="hero-description">MERN stack developer building scalable and user-friendly web applications
+                    with clean code and modern practices.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/arjunkunwar224" target="_blank" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arjun-kunwar-285198281/" target="_blank"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>Scroll Down</p>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ ABOUT SECTION ═══════════════════ -->
+        <section id="about" class="section about-section">
+            <div class="section-bg-animation"></div>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="title-number"></span> About Me
+                </h2>
+                <div class="about-grid">
+                    <div class="about-image-wrapper" data-aos="fade-right" data-aos-duration="800">
+                        <div class="about-image-container" id="aboutImageContainer">
+                            <img src="img/arjun-photo.jpg" alt="Arjun Kunwar" id="aboutPhoto" class="about-photo">
+                            <div class="photo-upload-placeholder hidden" id="photoPlaceholder">
+                                <i class="fa-solid fa-camera"></i>
+                                <p>Click to upload photo</p>
+                                <input type="file" id="photoUpload" accept="image/*" hidden>
+                            </div>
+                            <div class="image-border-decor"></div>
+                        </div>
+                    </div>
+                    <div class="about-content" data-aos="fade-left" data-aos-duration="800">
+                        <p class="about-text">
+                            MERN stack developer building scalable, user-friendly web applications with React, Node.js,
+                            and MongoDB. Experienced in deploying and architecting cloud solutions on AWS to ensure
+                            performance, reliability, and scalability. Accessibility and clean code are my guiding
+                            principles.
+                        </p>
+                        <div class="about-skills">
+                            <h3 class="skills-title">Technologies I work with:</h3>
+                            <ul class="skills-list">
+                                <ul class="skills-list">
+                                    <li><i class="fa-solid fa-caret-right"></i> React / Next.js</li>
+                                    <li><i class="fa-solid fa-caret-right"></i> Node.js / Express</li>
+                                    <li><i class="fa-solid fa-caret-right"></i> MongoDB</li>
+                                    <li><i class="fa-solid fa-caret-right"></i> TypeScript</li>
+                                    <li><i class="fa-solid fa-caret-right"></i> AWS (EC2, S3, Lambda)</li>
+                                    <li><i class="fa-solid fa-caret-right"></i> CloudFormation</li>
+                                    <li><i class="fa-solid fa-caret-right"></i> ShadCN UI / Tailwind</li>
+                                    <li><i class="fa-solid fa-caret-right"></i>Docker</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ EXPERIENCE SECTION ═══════════════════ -->
+        <section id="experience" class="section experience-section">
+            <div class="section-bg-animation"></div>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="title-number"></span> Experience
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>AWS Solutions Architect Associate Trainee</h3>
+                                <span class="timeline-company">@ Karnovation Inc.</span>
+                            </div>
+                            <span class="timeline-date">2026 — Present | On-Site</span>
+                            <p class="timeline-description">Focused on exploring AWS services and cloud architecture
+                                principles to build expertise and prepare for the SAA certification.</p>
+                            <ul class="timeline-details">
+                                <li>Studying and practicing AWS core services including EC2, S3, VPC, RDS, Lambda, and
+                                    IAM</li>
+                                <li>Performing hands-on labs to understand service configurations and integrations</li>
+                                <li>Learning cloud architecture best practices and solutions design principles</li>
+                                <li>Preparing for the AWS Solutions Architect Associate certification exam</li>
+                                <li>Documenting learnings and key insights from AWS services and labs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Junior MERN Stack Developer</h3>
+                                <span class="timeline-company">@ WIEXO Inc.</span>
+                            </div>
+                            <span class="timeline-date">2024 — 2025 | Remote</span>
+                            <p class="timeline-description">Worked as a MERN Stack developer, building responsive web
+                                pages and frontend features using React and TypeScript.</p>
+                            <ul class="timeline-details">
+                                <li>Developed responsive web pages and UI components using React and TypeScript</li>
+                                <li>Implemented design components with ShadCN UI to enhance user experience</li>
+                                <li>Built interactive graphics and visuals with WebGL</li>
+                                <li>Collaborated with the team using Trello and Jira for project tracking and agile
+                                    workflow</li>
+                                <li>Assisted in integrating frontend with backend APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ PROJECTS SECTION ═══════════════════ -->
+        <section id="projects" class="section projects-section">
+            <div class="section-bg-animation"></div>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="title-number"></span> Projects
+                </h2>
+                <div class="projects-grid">
+                    <!-- Project 1: Skin Lesion Classification and Segmentation -->
+                    <article class="project-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+                        data-tilt-max-glare="0.08" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="image/skin-lesion.jpg" alt="Skin Lesion Classification Project">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Skin Lesion Classification and Segmentation</h3>
+                            <p class="project-description">Deep learning system using CNN for classification and UNet for precise segmentation of skin lesions to aid in early melanoma detection.</p>
+                            <ul class="project-tech">
+                                <li>Python</li>
+                                <li>TensorFlow</li>
+                                <li>CNN</li>
+                                <li>UNet</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- Project 2: Multi-modal AI System for Neurological Disorders -->
+                    <article class="project-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+                        data-tilt-max-glare="0.08" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="image/neuro-ai.jpg" alt="Neurological Disorders AI System">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Multi-modal AI System for Neurological Disorders</h3>
+                            <p class="project-description">Advanced AI system combining multiple data modalities for accurate detection and analysis of neurological disorders using deep learning.</p>
+                            <ul class="project-tech">
+                                <li>Python</li>
+                                <li>PyTorch</li>
+                                <li>LSTM</li>
+                                <li>Longformer</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- Project 3: Role Playing Game -->
+                    <article class="project-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+                        data-tilt-max-glare="0.08" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="image/rpg-game.jpg" alt="Role Playing Game">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Role Playing Game</h3>
+                            <p class="project-description">Interactive browser-based RPG with character progression, combat mechanics, and quest system built entirely with vanilla JavaScript.</p>
+                            <ul class="project-tech">
+                                <li>JavaScript</li>
+                                <li>HTML5 Canvas</li>
+                                <li>CSS3</li>
+                                <li>Game Design</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- Project 4: Ticket Reservation System -->
+                    <article class="project-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+                        data-tilt-max-glare="0.08" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <img src="image/ticket-system.jpg" alt="Ticket Reservation System">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Ticket Reservation System</h3>
+                            <p class="project-description">Console-based ticket booking system with seat management, user authentication, and real-time availability tracking implemented in C++.</p>
+                            <ul class="project-tech">
+                                <li>C++</li>
+                                <li>OOP</li>
+                                <li>Data Structures</li>
+                                <li>File I/O</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- Project 5: Cafe Menu Website -->
+                    <article class="project-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+                        data-tilt-max-glare="0.08" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-image">
+                            <img src="image/cafe-menu.jpg" alt="Cafe Menu Website">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Cafe Menu</h3>
+                            <p class="project-description">Elegant and responsive cafe menu website showcasing menu items with clean design and smooth animations using pure HTML and CSS.</p>
+                            <ul class="project-tech">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Flexbox</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+      <!-- ═══════════════════ BLOG SECTION ═══════════════════ -->
+        <section id="blog" class="section blog-section">
+            <div class="section-bg-animation"></div>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="title-number"></span> Blog
+                </h2>
+                <div class="blog-toolbar" data-aos="fade-up" data-aos-delay="100">
+                    <p class="blog-subtitle">Thoughts, tutorials, and insights from my journey.</p>
+                    <button class="btn btn-primary" id="newBlogBtn">
+                        <i class="fa-solid fa-pen-to-square"></i> Write a Post
+                    </button>
+                </div>
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog cards will be rendered dynamically from localStorage -->
+                    <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="blog-card-image">
+                            <div class="blog-card-tag">AWS Tutorial</div>
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-date"><i class="fa-regular fa-calendar"></i> Jan 10, 2026</span>
+                            <h3 class="blog-card-title">Handling User Files in the Cloud: Building an Application-Ready Storage Layer</h3>
+                            <p class="blog-card-excerpt">Learn how to build a robust, scalable file storage solution using AWS S3, Lambda, and CloudFormation for production applications...</p>
+                            <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="blog-card-image">
+                            <div class="blog-card-tag">AWS Guide</div>
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-date"><i class="fa-regular fa-calendar"></i> Feb 2, 2026</span>
+                            <h3 class="blog-card-title">Securing Your Data in the Cloud: Integrating Multi-AZ MySQL with Amazon RDS and EC2</h3>
+                            <p class="blog-card-excerpt">A comprehensive guide to setting up highly available, secure MySQL databases using Amazon RDS Multi-AZ deployments with EC2 integration...</p>
+                            <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ BLOG MODAL ═══════════════════ -->
+        <div class="modal-overlay" id="blogModal">
+            <div class="modal" role="dialog" aria-labelledby="blogModalTitle">
+                <div class="modal-header">
+                    <h3 id="blogModalTitle"><i class="fa-solid fa-pen-nib"></i> Write a Blog Post</h3>
+                    <button class="modal-close" id="blogModalClose" aria-label="Close modal">&times;</button>
+                </div>
+                <form class="modal-body" id="blogForm">
+                    <div class="form-group">
+                        <label for="blogTitle">Title</label>
+                        <input type="text" id="blogTitle" placeholder="Enter your blog title..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogTag">Category</label>
+                        <select id="blogTag">
+                            <option value="Tutorial">Tutorial</option>
+                            <option value="Insights">Insights</option>
+                            <option value="Guide">Guide</option>
+                            <option value="Case Study">Case Study</option>
+                            <option value="Personal">Personal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogContent">Content</label>
+                        <textarea id="blogContent" rows="10" placeholder="Write your blog post here..."
+                            required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogFile">Or upload a text/markdown file</label>
+                        <div class="file-upload-area" id="blogFileArea">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <p>Drag & drop or <span class="file-upload-link">browse</span></p>
+                            <input type="file" id="blogFile" accept=".txt,.md,.html" hidden>
+                            <span class="file-name" id="blogFileName"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fa-solid fa-paper-plane"></i> Publish Post
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ═══════════════════ BLOG VIEW MODAL ═══════════════════ -->
+        <div class="modal-overlay" id="blogViewModal">
+            <div class="modal modal-lg" role="dialog" aria-labelledby="blogViewTitle">
+                <div class="modal-header">
+                    <h3 id="blogViewTitle">Blog Post</h3>
+                    <button class="modal-close" id="blogViewClose" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body" id="blogViewBody">
+                    <!-- Blog content rendered here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════ CONTACT SECTION ═══════════════════ -->
+        <section id="contact" class="section contact-section">
+            <div class="section-bg-animation"></div>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="title-number"></span> Get In Touch
+                </h2>
+                <div class="contact-grid">
+                    <div class="contact-info" data-aos="fade-right" data-aos-duration="800">
+                        <p class="contact-text">
+                            I'm currently open to new opportunities and collaborations.
+                            Whether you have a question, a project idea, or just want to say hello —
+                            my inbox is always open!
+                        </p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="/cdn-cgi/l/email-protection#8beaf9e1fee5e0fee5fceaf9b3b3bfb3cbece6eae2e7a5e8e4e6"><span class="__cf_email__" data-cfemail="91f0e3fbe4fffae4ffe6f0e3a9a9a5a9d1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Nepal</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <a href="tel:+1234567890">9818118327</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-socials">
+                            <a href="https://github.com/arjunkunwar224" target="_blank" class="social-link"
+                                aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/arjun-kunwar-285198281/" target="_blank"
+                                class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-duration="800">
+                        <div class="form-group">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" placeholder="Messi" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" placeholder="Messi@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" placeholder="Project Inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" rows="5" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ RESUME FLOATING BUTTON ═══════════════════ -->
+        <a href="#" class="resume-fab" id="resumeFab" title="Download Resume">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Resume</span>
+        </a>
+
+        <!-- ═══════════════════ FOOTER ═══════════════════ -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p class="footer-text">Designed &amp; Built </span> by
+                        <strong>Arjun Kunwar</strong>
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/arjunkunwar224" target="_blank" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/arjun-kunwar-285198281/" target="_blank"
+                            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <p class="footer-copy">&copy; 2026 All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ═══════════════════ TOAST NOTIFICATION ═══════════════════ -->
+        <div class="toast-container" id="toastContainer"></div>
+
+        <!-- ═══════════════════ SCRIPTS ═══════════════════ -->
+        <!-- Particles.js -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <!-- Typed.js -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <!-- Vanilla Tilt -->
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+        <!-- AOS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <!-- Custom Script -->
+        <script src="script.js"></script>
+    </body>
+
+</html>
