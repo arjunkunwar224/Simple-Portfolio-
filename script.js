@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════
    PORTFOLIO — MAIN JAVASCRIPT
-   Interactivity, Libraries, Blog CRUD, Photo Upload
+   Interactivity, Libraries, Blog CRUD
    ═══════════════════════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Typed('#typed-output', {
         strings: [
             'Full-Stack Developer',
-            'UI/UX Enthusiast',
+            'AWS',
             'Open Source Contributor',
             'Problem Solver',
         ],
@@ -111,53 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         lastScroll = scrollY;
-    });
-
-
-    // ═══════════════════════════════════════════════════════
-    //  PHOTO UPLOAD (ABOUT SECTION)
-    // ═══════════════════════════════════════════════════════
-
-    const photoPlaceholder = document.getElementById('photoPlaceholder');
-    const photoUpload = document.getElementById('photoUpload');
-    const aboutPhoto = document.getElementById('aboutPhoto');
-
-    // Load saved photo
-    const savedPhoto = localStorage.getItem('portfolio_photo');
-    if (savedPhoto) {
-        aboutPhoto.src = savedPhoto;
-        aboutPhoto.classList.remove('hidden');
-        photoPlaceholder.classList.add('hidden');
-    }
-
-    photoPlaceholder.addEventListener('click', () => photoUpload.click());
-
-    // Also allow clicking the photo itself to re-upload
-    aboutPhoto.addEventListener('click', () => photoUpload.click());
-
-    photoUpload.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
-
-        if (!file.type.startsWith('image/')) {
-            showToast('Please select an image file.', 'error');
-            return;
-        }
-
-        if (file.size > 5 * 1024 * 1024) {
-            showToast('Image must be smaller than 5MB.', 'error');
-            return;
-        }
-
-        const reader = new FileReader();
-        reader.onload = (ev) => {
-            aboutPhoto.src = ev.target.result;
-            aboutPhoto.classList.remove('hidden');
-            photoPlaceholder.classList.add('hidden');
-            localStorage.setItem('portfolio_photo', ev.target.result);
-            showToast('Photo uploaded successfully!', 'success');
-        };
-        reader.readAsDataURL(file);
     });
 
 
@@ -383,11 +336,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleResumeDownload(e) {
         e.preventDefault();
-        // If user has placed a resume.pdf in assets/, this would download it.
-        // For demo: show a helpful toast.
         const resumeUrl = 'assets/resume.pdf';
 
-        // Try a fetch to see if resume exists
         fetch(resumeUrl, { method: 'HEAD' })
             .then(res => {
                 if (res.ok) {
@@ -466,7 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeModal(modal) {
         modal.classList.remove('active');
-        // Restore scrolling only if no other modals open
         const anyOpen = document.querySelector('.modal-overlay.active');
         if (!anyOpen) document.body.style.overflow = '';
     }
